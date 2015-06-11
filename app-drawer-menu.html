@@ -8,18 +8,21 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
-<link rel="import" href="../../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
-<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../paper-menu/paper-menu.html">
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../iron-icons/communication-icons.html">
+<link rel="import" href="../iron-selector/iron-selector.html">
 
 <!--
-An element providing a solution to no problem in particular.
+Display a simple menu. This menu should be used in a drawer.
 
 Example:
 
-    <app-drawer-menu></app-drawer-menu>
+    <app-drawer-menu 
+      current-route="[[route]]" 
+      menu-items="[[menuItems]]">
+    </app-drawer-menu>
 
 @demo
 -->

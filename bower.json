@@ -2,14 +2,15 @@
   "name": "app-drawer-menu",
   "version": "1.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Thomas Hourlier"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "Display a simple menu. This menu should be used in a drawer.",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
-    "seed"
+    "menu",
+    "drawer"
   ],
   "main": "app-drawer-menu.html",
   "license": "http://polymer.github.io/LICENSE.txt",
@@ -28,6 +29,8 @@
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*"
+    "web-component-tester": "*",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#~1.0.1",
+    "test-fixture": "PolymerElements/test-fixture#~1.0.0"
   }
 }

@@ -20,16 +20,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <p>An example of <code>&lt;app-drawer-menu&gt;</code>:</p>
 
-    <button>Say Something</button>
+    <template id="app" is="dom-bind">
 
-    <app-drawer-menu author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
-      <h2>Hello app-drawer-menu</h2>
-    </app-drawer-menu>
+      <app-drawer-menu 
+        current-route="[[route]]" 
+        menu-items="[[menuItems]]">
+      </app-drawer-menu>
+
+    </template>
 
     <script>
-      document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('app-drawer-menu').sayHello('Hallo!'));
-      });
+      var app = document.querySelector('#app');
+
+      app.menuItems = [
+        {
+          routeName: 'work',
+          route: '/work',
+          title: 'WORK',
+          icon: 'info'
+        },
+        {
+          routeName: 'company',
+          route: '/company',
+          title: 'COMPANY',
+          icon: 'home'
+        },
+        {
+          routeName: 'projects',
+          route: '/projects',
+          title: 'PROJECTS',
+          icon: 'polymer'
+        },
+        {
+          routeName: 'contact',
+          route: '/contact',
+          title: 'CONTACT',
+          icon: 'communication:contacts'
+        }
+      ];
+
+      app.route = '/work';
     </script>
 
   </body>
