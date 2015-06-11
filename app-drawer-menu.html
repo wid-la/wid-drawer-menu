@@ -43,9 +43,7 @@ Example:
     }
   </style>
   <template>
-
-    <span>{{currentRoute}}</span>
-
+  
     <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
       <template is="dom-repeat" items="[[menuItems]]">
           <paper-item data-route="[[item.routeName]]">
