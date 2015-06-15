@@ -46,12 +46,12 @@ Example:
   
     <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
       <template is="dom-repeat" items="[[menuItems]]">
+        <a href="[[item.route]]">
           <paper-item data-route$="[[item.routeName]]">
-            <a href="[[item.route]]">
-              <iron-icon icon="[[item.icon]]"></iron-icon>
-              <span>[[item.title]]</span>
-            </a>
+            <iron-icon icon="[[item.icon]]"></iron-icon>
+            <span>[[item.title]]</span>
           </paper-item>
+        </a>
       </template>
     </paper-menu>
 
