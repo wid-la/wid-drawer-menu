@@ -12,7 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../paper-item/paper-item.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icons/communication-icons.html">
-<link rel="import" href="../iron-selector/iron-selector.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 
 <!--
 Display a simple menu. This menu should be used in a drawer.
@@ -33,6 +33,7 @@ Example:
       display: block;
     }
     a {
+      width: 100%;
       color: inherit;
       text-decoration: none;
     }
@@ -46,12 +47,12 @@ Example:
   
     <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]" on-iron-select="_onMenuSelect">
       <template is="dom-repeat" items="[[menuItems]]">
-        <a href="[[item.route]]">
-          <paper-item data-route$="[[item.routeName]]">
-            <iron-icon icon="[[item.icon]]"></iron-icon>
-            <span>[[item.title]]</span>
+          <paper-item data-route$="[[item.routeName]]" class="layout vertical center-center">
+            <a href="[[item.route]]" class="flex layout horizontal start-center">
+                <iron-icon icon="[[item.icon]]"></iron-icon>
+                <span>[[item.title]]</span>
+            </a>
           </paper-item>
-        </a>
       </template>
     </paper-menu>
 
@@ -84,11 +85,11 @@ Example:
        */
       currentRoute: {
         type: String
-      },
-
-      _onMenuSelect: function(event) {
-        this.fire('on-iron-select', event.detail);
       }
+    },
+
+    _onMenuSelect: function(event) {
+      this.fire('iron-select', event.detail);
     }
   });
 
