@@ -44,7 +44,7 @@ Example:
   </style>
   <template>
   
-    <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
+    <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]" on-iron-select="_onMenuSelect">
       <template is="dom-repeat" items="[[menuItems]]">
         <a href="[[item.route]]">
           <paper-item data-route$="[[item.routeName]]">
@@ -84,6 +84,10 @@ Example:
        */
       currentRoute: {
         type: String
+      },
+
+      _onMenuSelect: function(event) {
+        this.fire('on-iron-select', event.detail);
       }
     }
   });
