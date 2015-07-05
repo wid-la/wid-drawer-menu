@@ -12,21 +12,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../paper-item/paper-item.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icons/communication-icons.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 
 <!--
 Display a simple menu. This menu should be used in a drawer.
 
 Example:
 
-    <app-drawer-menu 
+    <wid-drawer-menu 
       current-route="[[route]]" 
       menu-items="[[menuItems]]">
-    </app-drawer-menu>
+    </wid-drawer-menu>
 
 @demo
 -->
-<dom-module id="app-drawer-menu">
+<dom-module id="wid-drawer-menu">
 
   <style>
     :host {
@@ -44,15 +43,17 @@ Example:
     }
   </style>
   <template>
-  
-    <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]" on-iron-select="_onMenuSelect">
+
+    <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
       <template is="dom-repeat" items="[[menuItems]]">
-          <paper-item data-route$="[[item.routeName]]" class="layout vertical center-center">
-            <a href="[[item.route]]" class="flex layout horizontal start-center">
-                <iron-icon icon="[[item.icon]]"></iron-icon>
-                <span>[[item.title]]</span>
-            </a>
+
+        <a href="[[item.route]]" data-route$="[[item.routeName]]">
+          <paper-item>
+            <iron-icon icon="[[item.icon]]"></iron-icon>
+            <span>[[item.title]]</span>
           </paper-item>
+        </a>
+
       </template>
     </paper-menu>
 
@@ -64,7 +65,7 @@ Example:
 
   Polymer({
 
-    is: 'app-drawer-menu',
+    is: 'wid-drawer-menu',
 
     properties: {
 
@@ -86,10 +87,6 @@ Example:
       currentRoute: {
         type: String
       }
-    },
-
-    _onMenuSelect: function(event) {
-      this.fire('iron-select', event.detail);
     }
   });
 

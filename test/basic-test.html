@@ -20,23 +20,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <!-- Step 1: import the element to test -->
     <link rel="import" href="../../test-fixture/test-fixture.html">
-    <link rel="import" href="../app-drawer-menu.html">
+    <link rel="import" href="../wid-drawer-menu.html">
   </head>
   <body>
 
     <!-- You can use the document as a place to set up your fixtures. -->
-    <test-fixture id="app-drawer-menu">
+    <test-fixture id="wid-drawer-menu">
       <template>
 
-        <app-drawer-menu>
-        </app-drawer-menu>
+        <wid-drawer-menu>
+        </wid-drawer-menu>
 
       </template>
     </test-fixture>
     
 
     <script>
-      suite('<app-drawer-menu>', function() {
+      suite('<wid-drawer-menu>', function() {
         var c1,
             menus = [
             {
@@ -66,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           ];
 
         setup(function() {
-          c1 = fixture('app-drawer-menu');
+          c1 = fixture('wid-drawer-menu');
           c1.menuItems = menus;
 
           c1.currentRoute = '/work';

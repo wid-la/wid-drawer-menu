@@ -1,5 +1,5 @@
 {
-  "name": "app-drawer-menu",
+  "name": "wid-drawer-menu",
   "version": "1.0.0",
   "authors": [
     "Thomas Hourlier <hourliert@gmail.com>"
@@ -12,7 +12,7 @@
     "menu",
     "drawer"
   ],
-  "main": "app-drawer-menu.html",
+  "main": "wid-drawer-menu.html",
   "license": "MIT",
   "homepage": "https://github.com/hourliert/login-polyform/",
   "ignore": [
