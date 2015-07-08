@@ -47,7 +47,7 @@ Example:
     <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
       <template is="dom-repeat" items="[[menuItems]]">
 
-        <a href="[[item.route]]" data-route$="[[item.routeName]]">
+        <a href$="[[item.route]]" data-route$="[[item.route]]">
           <paper-item>
             <iron-icon icon="[[item.icon]]"></iron-icon>
             <span>[[item.title]]</span>
@@ -71,7 +71,7 @@ Example:
 
       /**
        * This items array will be displayed in the paper-menu.
-       * @type {[{ routeName: String, route: String, title: String, icon: String}]}
+       * @type {[{ route: String, title: String, icon: String}]}
        */
       menuItems: {
         type: Array,
