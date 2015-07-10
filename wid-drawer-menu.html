@@ -18,8 +18,8 @@ Display a simple menu. This menu should be used in a drawer.
 
 Example:
 
-    <wid-drawer-menu 
-      current-route="[[route]]" 
+    <wid-drawer-menu
+      current-route="[[route]]"
       menu-items="[[menuItems]]">
     </wid-drawer-menu>
 
@@ -47,12 +47,10 @@ Example:
     <paper-menu class="list" attr-for-selected="data-route" selected="[[currentRoute]]">
       <template is="dom-repeat" items="[[menuItems]]">
 
-        <a href$="[[item.route]]" data-route$="[[item.route]]">
-          <paper-item>
-            <iron-icon icon="[[item.icon]]"></iron-icon>
-            <span>[[item.title]]</span>
-          </paper-item>
-        </a>
+        <paper-item data-route$="[[item.route]]" on-tap="_onTap">
+          <iron-icon icon="[[item.icon]]"></iron-icon>
+          <span>[[item.title]]</span>
+        </paper-item>
 
       </template>
     </paper-menu>
@@ -87,6 +85,10 @@ Example:
       currentRoute: {
         type: String
       }
+    },
+
+    _onTap: function (e) {
+      this.fire('drawer-menu-tap', e.model.item);
     }
   });
 
