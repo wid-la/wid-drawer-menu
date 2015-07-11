@@ -13,8 +13,8 @@
     "drawer"
   ],
   "main": "wid-drawer-menu.html",
-  "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "license": "MIT",
+  "homepage": "https://github.com/wid-la/wid-cards-grid",
   "ignore": [
     "/.*",
     "/test/",
